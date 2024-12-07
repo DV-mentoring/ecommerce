@@ -1,25 +1,20 @@
-import styles from "./reviewCard.module.scss"
-import FullStar from "../vector/FullStar.tsx"
-import HalfStar from "../vector/HalfStar.tsx"
+import styles from "./productCard.module.scss"
+import FullStar from "../../../shared/ui/StarIcon/FullStar.tsx"
+import HalfStar from "../../../shared/ui/StarIcon/HalfStar.tsx"
 import React from "react";
 
-interface ReviewCardProps {
-    username: string,
-    description: string,
+interface ProductCardProps {
+    title: string,
     rating: number,
-    month: string,
-    day: number,
-    year: number
+    price: number
 }
 
-const ReviewCard:React.FC<ReviewCardProps> = ({
-    username,
-    description,
+const ReviewCard:React.FC<ProductCardProps> = ({
+    title,
     rating,
-    month,
-    day,
-    year
-}) => {
+    price,
+
+                                              }) => {
     const roundedRating = Math.floor(rating * 2) / 2;
     const renderStars = (rating: number) => {
         const stars = [];
@@ -44,19 +39,15 @@ const ReviewCard:React.FC<ReviewCardProps> = ({
                     {rating}
                 </span>
             </div>
-            {/*Need to add logic to 3 dots*/}
             <div>
                 •••
             </div>
             <h2 className={styles.username}>
-                {username}
+                {title}
             </h2>
-            <p className={styles.review}>
-                {description}
-            </p>
-            <span className={styles.date}>
-                Posted on {month} {day}, {year}
-            </span>
+            <h2>
+                {price}
+            </h2>
         </article>
     )
 }

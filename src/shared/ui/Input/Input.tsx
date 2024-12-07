@@ -1,6 +1,6 @@
 import "./input.module.css"
 import React, {InputHTMLAttributes} from "react";
-import SearchIcon from "../../../public/assets/svgs/search.svg"
+import SearchIcon from "../../../../public/assets/svgs/search.svg"
 import styles from "./input.module.css";
 
 interface InputProps extends InputHTMLAttributes<HTMLInputElement> {

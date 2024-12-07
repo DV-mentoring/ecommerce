@@ -1,7 +1,7 @@
 gimport {useForm} from "react-hook-form";
 import React, {useRef} from "react";
-import Button from "../button/Button.tsx";
-import { registerUser } from "../../features/authService.ts";
+import Button from "../../../shared/ui/Button/Button.tsx";
+import { registerUser } from "../../authService.ts";
 import styles from "./authForm.module.scss";
 
 
