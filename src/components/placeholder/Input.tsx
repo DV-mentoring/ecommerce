@@ -1,14 +1,19 @@
-import "./placeholder.module.css"
-import React from "react";
+import "./input.module.css"
+import React, {InputHTMLAttributes} from "react";
+import SearchIcon from "../../../public/assets/svgs/search.svg"
+import styles from "./input.module.css";
 
-const Input: React.FC<{placeholder:string}> = ({placeholder}) => {
+interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
+    placeholder: string;
+}
+
+const Input: React.FC<InputProps> = ({placeholder, ...props}) => {
     return (
         <>
-            <div>
-                <img className="placeholder" src="/public/assets/svgs/placeholder.svg" alt="search" />
-                <input className="searchbar" placeholder={placeholder}/>
-            </div>
-
+            <label className={styles.label} htmlFor="search">
+                <img className="placeholder" src={SearchIcon} alt="search" />
+                <input className={styles.searchbar} id="search" placeholder={placeholder} {...props}/>
+            </label>
         </>
     )
 }
