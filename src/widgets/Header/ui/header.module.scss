@@ -1,0 +1,56 @@
+header{
+  max-width: 1280px;
+  height: 3rem;
+  padding-top: 1rem;
+  margin: 0 auto;
+
+  nav{
+    max-width: 1280px;
+    display: flex;
+    flex-direction: row;
+
+    .header_menu{
+      list-style: none;
+      display: flex;
+      align-items: center;
+      width: 100%;
+
+      .nav_menu_container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1.5rem;
+        margin-left: 3rem;
+      }
+
+      .nav_link{
+        display: inline-block;
+        white-space: nowrap;
+        color: $color-text-primary;
+        text-decoration: none;
+
+        img{
+          max-height: 2rem;
+        }
+      }
+
+      .cart_profile_container{
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+
+        img{
+          display: inline-block;
+          width: auto;
+          max-height: 1.5rem;
+        }
+      }
+
+
+      //кнопка профиль, позже можно будет добавить
+      .cart_profile_container > li:last-child{
+        display: none;
+      }
+    }
+  }
+}

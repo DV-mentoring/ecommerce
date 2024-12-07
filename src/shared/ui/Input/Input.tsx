@@ -1,7 +1,7 @@
-import "./input.module.css"
+import "./input.module.scss"
 import React, {InputHTMLAttributes} from "react";
 import SearchIcon from "../../../../public/assets/svgs/search.svg"
-import styles from "./input.module.css";
+import styles from "./input.module.scss";
 
 interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
     placeholder: string;
@@ -12,7 +12,7 @@ const Input: React.FC<InputProps> = ({placeholder, ...props}) => {
         <>
             <label className={styles.label} htmlFor="search">
                 <img className="placeholder" src={SearchIcon} alt="search" />
-                <input className={styles.searchbar} id="search" placeholder={placeholder} {...props}/>
+                <input className={styles.searchbar} id="search" name="search" placeholder={placeholder} {...props}/>
             </label>
         </>
     )
