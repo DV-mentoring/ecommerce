@@ -1,6 +1,5 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import "./header.module..scss"
 import Input from "../../../shared/ui/Input/Input.tsx";
 
 const Header: React.FC = () => {

@@ -6,23 +6,19 @@
     border-radius: 2rem;
     cursor: text;
 }
-
 img{
     user-drag: none;
     -webkit-user-drag: none;
 }
-
 .searchbar {
     border: none !important;
     outline: none;
     user-select: none;
 }
-
 .searchbar:-webkit-autofill {
     background-color: white !important;
     color: black !important;
     box-shadow: 0 0 0 1000px white inset !important;
 }
-
 .placeholder {
 }
