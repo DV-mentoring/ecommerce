@@ -47,7 +47,7 @@ const ProductCard:React.FC<ProductCardProps> =
                     {rating}
                 </span>
             </div>
-            <h2>2
+            <h2>
                 ${price}
             </h2>
         </article>
