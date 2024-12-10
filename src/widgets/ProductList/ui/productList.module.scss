@@ -10,13 +10,16 @@
     margin-top: 1rem;
   }
 
-  .load {
+  .load, p {
     grid-column: 1 / -1;
     justify-self: center;
     display: flex;
-    width: 15rem;
     align-items: center;
     justify-content: center;
+  }
+
+  .load{
+    width: 15rem;
     border-radius: 2rem;
     border: 1px solid $color-bg-secondary;
     background: $color-bg-primary;

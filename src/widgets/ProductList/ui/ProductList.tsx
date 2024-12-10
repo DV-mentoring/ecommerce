@@ -1,8 +1,8 @@
 import React, {useEffect, useRef, useState} from "react";
-import ProductCard from "../../../entities/Product/ui/ProductCard.tsx";
-import { fetchProducts, fetchInitialProducts } from "../../../entities/Product/model/api.ts";
+import {ProductCard} from "../../../entities/Product/ui/ProductCard.tsx";
+import { fetchProducts } from "../model/api.ts";
 import styles from "./productList.module.scss";
-import Button from "../../../shared/ui/Button/Button.tsx";
+import {Button} from "../../../shared/ui/Button/Button.tsx";
 
 
 interface Product {
@@ -16,62 +16,37 @@ interface Product {
 export const ProductList:React.FC = () => {
     const [products, setProducts] = useState<Product[]>([]);
     const [page, setPage] = useState(1);
-    const [loading, setLoading] = useState(false);
     const productIds = useRef<Set<number>>(new Set<number>());
     const [hasMore, setHasMore] = useState(true);
+    const isFetching = useRef(false);
+    const [error, setError] = useState<string|null>(null);
 
-    const loadInitialProducts = async () => {
-        setLoading(true);
-        try {
-            const initialProducts = await fetchInitialProducts();
-            const uniqueProducts = initialProducts.filter((product:Product) => !productIds.current.has(product.id)
-            );
 
-            uniqueProducts.forEach((product:Product) => {
-                productIds.current.add(product.id);
-            })
-            console.log("first pack of products", uniqueProducts);
-            setProducts(initialProducts);
-            setPage((prev) => prev + 1);
-        } catch (error) {
-            console.error("Error loading initial products --->", error);
-        } finally {
-            setLoading(false);
-        }
-    };
-
-    const loadMoreProducts = async() => {
-        if (loading) return;
-        setLoading(true);
+    const loadProducts = async() => {
+        if (isFetching.current) return;
+        isFetching.current = true;
 
         try{
             const newProducts = await fetchProducts(page, 8);
             const uniqueProducts = newProducts.filter((product:Product) => !productIds.current.has(product.id)
             );
-
-            console.log("Current unique product ids --->", productIds.current);
-
             uniqueProducts.forEach((product:Product) => {
                 productIds.current.add(product.id);
             })
-
-            console.log("Unique products --->",uniqueProducts);
             if (uniqueProducts.length < 8){
                 setHasMore(false);
             }
-
             setProducts((prev) => [...prev, ...uniqueProducts]);
             setPage((prev) => prev + 1);
-            console.log("Load more:", {uniqueProducts});
-        } catch(error){
-            console.log(error)
+        } catch (error) {
+            setError("Unable to load products. Please refresh the page or try again later.");
         } finally {
-            setLoading(false);
+            isFetching.current = false;
         }
     }
 
     useEffect(() => {
-        loadInitialProducts();
+        loadProducts();
     }, []);
 
     return (
@@ -79,7 +54,7 @@ export const ProductList:React.FC = () => {
             <h1>
                 OUR PRODUCTS
             </h1>
-            {products.length > 0 ? (
+            {!isFetching.current ?(
                 products.map((product, index) => (
                     <ProductCard
                         key={`product_${index}`}
@@ -90,19 +65,19 @@ export const ProductList:React.FC = () => {
                     />
                 ))
             ) : (
-                <p>Загрузка...</p>
+                <p>Loading...</p>
             )}
+            {error && <p>{error}</p>}
             {hasMore && (
                 <Button
-                    onClick={loadMoreProducts}
-                    disabled={loading}
+                    onClick={loadProducts}
+                    disabled={isFetching.current}
                     label="Load more"
                     className={styles.load}
                 >
-                    {loading ? "Loading..." : "Load More"}
+                    {isFetching.current ? "Loading..." : "Load More"}
                 </Button>
             )}
-
         </section>
     );
 };
