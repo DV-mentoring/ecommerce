@@ -1,17 +1,17 @@
-.card{
-  border: 1px solid lightgray;
-  border-radius: 2rem;
-  padding: 2rem;
-  width: 100%;
+.card {
+    border: 1px solid lightgray;
+    border-radius: 2rem;
+    padding: 2rem;
+    width: 100%;
 
-  .rating{
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    justify-self: flex-start;
+    .rating {
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        justify-self: flex-start;
 
-    span{
-      margin-left: 0.5rem;
+        span {
+            margin-left: 0.5rem;
+        }
     }
-  }
 }

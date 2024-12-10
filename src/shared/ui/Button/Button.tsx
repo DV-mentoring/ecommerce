@@ -1,6 +1,5 @@
-import React, {MutableRefObject, ReactNode} from "react";
-import styles from "./button.module.scss"
-
+import React, { MutableRefObject, ReactNode } from "react";
+import styles from "./button.module.scss";
 
 type ButtonProps = {
     label: string;
@@ -10,12 +9,19 @@ type ButtonProps = {
     className?: string;
 };
 
-export const Button:React.FC<ButtonProps> = ({children, onClick, disabled, className}) => {
-
-    return(
-    <button onClick={onClick} disabled={disabled} className={`${className} ${styles.btn}`}>
+export const Button: React.FC<ButtonProps> = ({
+    children,
+    onClick,
+    disabled,
+    className,
+}) => {
+    return (
+        <button
+            onClick={onClick}
+            disabled={disabled}
+            className={`${className} ${styles.btn}`}
+        >
             {children}
-    </button>
-    )
-}
-
+        </button>
+    );
+};

@@ -1,34 +1,35 @@
-.container{
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 2rem;
-  margin: 1rem 0;
+.container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    margin: 1rem 0;
 
-  h1{
-    grid-column: 1 / -1;
-    justify-self: center;
-    margin-top: 1rem;
-  }
+    h1 {
+        grid-column: 1 / -1;
+        justify-self: center;
+        margin-top: 1rem;
+    }
 
-  .load, p {
-    grid-column: 1 / -1;
-    justify-self: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+    .load,
+    p {
+        grid-column: 1 / -1;
+        justify-self: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 
-  .load{
-    width: 15rem;
-    border-radius: 2rem;
-    border: 1px solid $color-bg-secondary;
-    background: $color-bg-primary;
-    transition: 0.2s cubic-bezier(   0.785, 0.135, 0.15, 0.86 );
-    cursor: pointer;
-  }
+    .load {
+        width: 15rem;
+        border-radius: 2rem;
+        border: 1px solid $color-bg-secondary;
+        background: $color-bg-primary;
+        transition: 0.2s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+        cursor: pointer;
+    }
 
-  .load:hover{
-    background: $color-bg-secondary;
-    border: 1px solid $color-btn-primary;
-  }
+    .load:hover {
+        background: $color-bg-secondary;
+        border: 1px solid $color-btn-primary;
+    }
 }
