@@ -6,10 +6,10 @@ export const registerUser = async (data: {
     email: string;
     password: string;
 }): Promise<void> => {
-
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const response = await axios.post(API_REGISTER_URL, data, {
         headers: {
-            "Content-Type": "application/json"
-        }
+            "Content-Type": "application/json",
+        },
     });
-}
+};

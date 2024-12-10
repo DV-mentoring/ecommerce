@@ -1,5 +1,4 @@
-import {createSlice, PayloadAction} from "@reduxjs/toolkit";
-
+import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 interface FormErrors {
     passwordMismatch: boolean;
@@ -11,7 +10,7 @@ const initialState: FormErrors = {
     passwordMismatch: false,
     emailInvalid: false,
     requiredFields: false,
-}
+};
 
 export const errorSlice = createSlice({
     name: "formErrors",
@@ -23,4 +22,3 @@ export const errorSlice = createSlice({
         clearErrors: () => initialState,
     },
 });
-
