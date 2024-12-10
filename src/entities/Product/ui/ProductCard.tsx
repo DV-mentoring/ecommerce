@@ -11,7 +11,7 @@ interface ProductCardProps {
     imageSrc: string,
 }
 
-const ProductCard:React.FC<ProductCardProps> =
+export const ProductCard:React.FC<ProductCardProps> =
     ({
          title,
          rating,
@@ -53,5 +53,3 @@ const ProductCard:React.FC<ProductCardProps> =
         </article>
     )
 }
-
-export default ProductCard;
