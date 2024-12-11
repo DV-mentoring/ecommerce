@@ -25,7 +25,7 @@ export const ProductList:React.FC = () =>  {
 
 
     const loadProducts = async() => {
-        if (loading || isFetching.current) return;
+        if (isFetching.current) return;
         setLoading(true);
         isFetching.current = true;
 
@@ -51,9 +51,7 @@ export const ProductList:React.FC = () =>  {
     }
 
     useEffect(() => {
-        if (!isFetching.current) {
-            loadProducts();
-        }
+        loadProducts();
     }, []);
 
     return (
@@ -78,7 +76,7 @@ export const ProductList:React.FC = () =>  {
             {hasMore && (
                 <Button
                     onClick={loadProducts}
-                    disabled={loading}
+                    disabled={loading || isInitialLoading}
                     label="Load more"
                     className={styles.load}
                 >
