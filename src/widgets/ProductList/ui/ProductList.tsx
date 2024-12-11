@@ -13,17 +13,20 @@ interface Product {
     image: string;
 }
 
-export const ProductList:React.FC = () => {
+export const ProductList:React.FC = () =>  {
     const [products, setProducts] = useState<Product[]>([]);
     const [page, setPage] = useState(1);
     const productIds = useRef<Set<number>>(new Set<number>());
     const [hasMore, setHasMore] = useState(true);
     const isFetching = useRef(false);
+    const [loading, setLoading] = useState(false);
     const [error, setError] = useState<string|null>(null);
+    const [isInitialLoading, setIsInitialLoading] = useState(true);
 
 
     const loadProducts = async() => {
-        if (isFetching.current) return;
+        if (loading || isFetching.current) return;
+        setLoading(true);
         isFetching.current = true;
 
         try{
@@ -33,7 +36,7 @@ export const ProductList:React.FC = () => {
             uniqueProducts.forEach((product:Product) => {
                 productIds.current.add(product.id);
             })
-            if (uniqueProducts.length < 8){
+            if (uniqueProducts.length < 8) {
                 setHasMore(false);
             }
             setProducts((prev) => [...prev, ...uniqueProducts]);
@@ -41,12 +44,16 @@ export const ProductList:React.FC = () => {
         } catch (error) {
             setError("Unable to load products. Please refresh the page or try again later.");
         } finally {
+            if (isInitialLoading) setIsInitialLoading(false);
             isFetching.current = false;
+            setLoading(false);
         }
     }
 
     useEffect(() => {
-        loadProducts();
+        if (!isFetching.current) {
+            loadProducts();
+        }
     }, []);
 
     return (
@@ -54,28 +61,28 @@ export const ProductList:React.FC = () => {
             <h1>
                 OUR PRODUCTS
             </h1>
-            {!isFetching.current ?(
-                products.map((product, index) => (
+            {isInitialLoading ? (
+                <p>Loading...</p>
+            ) : (
+                products.map((product) => (
                     <ProductCard
-                        key={`product_${index}`}
+                        key={`product-${product.id}`}
                         title={product.name}
                         price={product.price}
                         rating={product.rating}
                         imageSrc={product.image}
                     />
                 ))
-            ) : (
-                <p>Loading...</p>
             )}
             {error && <p>{error}</p>}
             {hasMore && (
                 <Button
                     onClick={loadProducts}
-                    disabled={isFetching.current}
+                    disabled={loading}
                     label="Load more"
                     className={styles.load}
                 >
-                    {isFetching.current ? "Loading..." : "Load More"}
+                    {loading ? "Loading..." : "Load More"}
                 </Button>
             )}
         </section>

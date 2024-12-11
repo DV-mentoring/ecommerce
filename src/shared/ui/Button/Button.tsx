@@ -1,11 +1,11 @@
-import React, {MutableRefObject, ReactNode} from "react";
+import React, { ReactNode} from "react";
 import styles from "./button.module.scss"
 
 
 type ButtonProps = {
     label: string;
     onClick: () => void;
-    disabled?: boolean | MutableRefObject<boolean>;
+    disabled?: boolean;
     children: ReactNode;
     className?: string;
 };
