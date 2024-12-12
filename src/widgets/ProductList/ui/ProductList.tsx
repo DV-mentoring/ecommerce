@@ -22,6 +22,7 @@ export const ProductList:React.FC = () =>  {
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState<string|null>(null);
     const [isInitialLoading, setIsInitialLoading] = useState(true);
+    const productSet = 8;
 
 
     const loadProducts = async() => {
@@ -30,13 +31,13 @@ export const ProductList:React.FC = () =>  {
         isFetching.current = true;
 
         try{
-            const newProducts = await fetchProducts(page, 8);
+            const newProducts = await fetchProducts(page, productSet);
             const uniqueProducts = newProducts.filter((product:Product) => !productIds.current.has(product.id)
             );
             uniqueProducts.forEach((product:Product) => {
                 productIds.current.add(product.id);
             })
-            if (uniqueProducts.length < 8) {
+            if (uniqueProducts.length < productSet) {
                 setHasMore(false);
             }
             setProducts((prev) => [...prev, ...uniqueProducts]);
@@ -44,9 +45,11 @@ export const ProductList:React.FC = () =>  {
         } catch (error) {
             setError("Unable to load products. Please refresh the page or try again later.");
         } finally {
-            if (isInitialLoading) setIsInitialLoading(false);
-            isFetching.current = false;
-            setLoading(false);
+            setTimeout(() => {
+                if (isInitialLoading) setIsInitialLoading(false);
+                isFetching.current = false;
+                setLoading(false);
+            }, 10000)
         }
     }
 
@@ -76,7 +79,7 @@ export const ProductList:React.FC = () =>  {
             {hasMore && (
                 <Button
                     onClick={loadProducts}
-                    disabled={loading || isInitialLoading}
+                    disabled={loading }
                     label="Load more"
                     className={styles.load}
                 >
