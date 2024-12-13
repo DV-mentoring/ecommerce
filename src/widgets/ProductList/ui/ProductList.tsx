@@ -33,13 +33,13 @@ export const ProductList:React.FC = () =>  {
         try{
             const response = await fetchProducts(page, PRODUCTS_SET);
             const { data: newProducts, items: total } = response;
-            const { size } = productIds.current;
             const uniqueProducts = newProducts.filter((product:Product) => !productIds.current.has(product.id));
             uniqueProducts.forEach((product:Product) => {
                 productIds.current.add(product.id);
             })
+            const { size } = productIds.current;
             if (size === total) {
-                setHasMore(false);
+                 setHasMore(false);
             }
             setProducts((prev) => [...prev, ...uniqueProducts]);
             setPage((prev) => prev + 1);
