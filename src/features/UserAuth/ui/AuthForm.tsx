@@ -23,9 +23,8 @@ const AuthForm: React.FC = () => {
         const passwordConfirmation = passwordConfirmationRef.current?.value;
         /* eslint-disable no-empty */
         if (data.password !== passwordConfirmation) {
-        }
+        } else {
         /* eslint-enable no-empty */
-        else {
             try {
                 await registerUser(data);
             } catch (error) {
