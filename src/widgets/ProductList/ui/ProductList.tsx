@@ -22,7 +22,7 @@ export const ProductList:React.FC = () =>  {
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState<string|null>(null);
     const [isInitialLoading, setIsInitialLoading] = useState(true);
-    const productSet = 8;
+    const PRODUCTS_SET = 8;
 
 
     const loadProducts = async() => {
@@ -31,18 +31,19 @@ export const ProductList:React.FC = () =>  {
         isFetching.current = true;
 
         try{
-            const newProducts = await fetchProducts(page, productSet);
-            const uniqueProducts = newProducts.filter((product:Product) => !productIds.current.has(product.id)
-            );
+            const response = await fetchProducts(page, PRODUCTS_SET);
+            const { data: newProducts, items: total } = response;
+            const { size } = productIds.current;
+            const uniqueProducts = newProducts.filter((product:Product) => !productIds.current.has(product.id));
             uniqueProducts.forEach((product:Product) => {
                 productIds.current.add(product.id);
             })
-            if (uniqueProducts.length < productSet) {
+            if (size === total) {
                 setHasMore(false);
             }
             setProducts((prev) => [...prev, ...uniqueProducts]);
             setPage((prev) => prev + 1);
-        } catch (error) {
+        } catch (err) {
             setError("Unable to load products. Please refresh the page or try again later.");
         } finally {
             if (isInitialLoading) setIsInitialLoading(false);
@@ -63,13 +64,13 @@ export const ProductList:React.FC = () =>  {
             {isInitialLoading ? (
                 <p>Loading...</p>
             ) : (
-                products.map((product) => (
+                products.map(({id, name, price, rating, image}) => (
                     <ProductCard
-                        key={`product-${product.id}`}
-                        title={product.name}
-                        price={product.price}
-                        rating={product.rating}
-                        imageSrc={product.image}
+                        key={`product-${id}`}
+                        title={name}
+                        price={price}
+                        rating={rating}
+                        imageSrc={image}
                     />
                 ))
             )}
