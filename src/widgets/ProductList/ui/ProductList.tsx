@@ -45,11 +45,9 @@ export const ProductList:React.FC = () =>  {
         } catch (error) {
             setError("Unable to load products. Please refresh the page or try again later.");
         } finally {
-            setTimeout(() => {
-                if (isInitialLoading) setIsInitialLoading(false);
-                isFetching.current = false;
-                setLoading(false);
-            }, 10000)
+            if (isInitialLoading) setIsInitialLoading(false);
+            isFetching.current = false;
+            setLoading(false);
         }
     }
 
