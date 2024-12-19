@@ -1,0 +1,88 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "T-shirt with Tape Details",
+      "price": 120,
+      "rating": 4.5,
+      "image": "/src/mock/images/img.png"
+    },
+    {
+      "id": 2,
+      "name": "Skinny Fit Jeans",
+      "price": 240,
+      "rating": 3.5,
+      "image": "/src/mock/images/img_1.png"
+    },
+    {
+      "id": 3,
+      "name": "Checkered Shirt",
+      "price": 180,
+      "rating": 4.5,
+      "image": "/src/mock/images/img_2.png"
+    },
+    {
+      "id": 4,
+      "name": "Sleeve Striped T-shirt",
+      "price": 130,
+      "rating": 4.5,
+      "image": "/src/mock/images/img_3.png"
+    },
+    {
+      "id": 5,
+      "name": "Vertical Striped Shirt",
+      "price": 212,
+      "rating": 5.0,
+      "image": "/src/mock/images/img_4.png"
+    },
+    {
+      "id": 6,
+      "name": "Courage Graphic T-shirt",
+      "price": 145,
+      "rating": 4.0,
+      "image": "/src/mock/images/img_5.png"
+    },
+    {
+      "id": 7,
+      "name": "Loose Fit Bermuda Shorts",
+      "price": 80,
+      "rating": 3.0,
+      "image": "/src/mock/images/img_6.png"
+    },
+    {
+      "id": 8,
+      "name": "Faded Skinny Jeans",
+      "price": 210,
+      "rating": 4.5,
+      "image": "/src/mock/images/img_7.png"
+    },
+    {
+      "id": 9,
+      "name": "Polo with Contrast Trims",
+      "price": 212,
+      "rating": 4.0,
+      "image": "/src/mock/images/img_8.png"
+    },
+    {
+      "id": 10,
+      "name": "Gradient Graphic T-shirt",
+      "price": 145,
+      "rating": 3.6,
+      "image": "/src/mock/images/img_9.png"
+    },
+    {
+      "id": 11,
+      "name": "Polo with Tipping Details",
+      "price": 180,
+      "rating": 4.5,
+      "image": "/src/mock/images/img_10.png"
+    },
+    {
+      "id": 12,
+      "name": "Black Striped T-shirt",
+      "price": 120,
+      "rating": 5.0,
+      "image": "/src/mock/images/img_11.png"
+    }
+  ]
+}
