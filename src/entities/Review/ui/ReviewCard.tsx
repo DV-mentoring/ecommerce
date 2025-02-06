@@ -1,6 +1,6 @@
 import styles from "./reviewCard.module.scss";
-import FullStar from "../../../shared/ui/StarIcon/FullStar.tsx";
-import HalfStar from "../../../shared/ui/StarIcon/HalfStar.tsx";
+import FullStar from "../../../shared/ui/Rating/StarIcons/Stars.tsx";
+import HalfStar from "../../../shared/ui/Rating/StarIcons/HalfStar.tsx";
 import React from "react";
 
 interface ReviewCardProps {

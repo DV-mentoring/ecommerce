@@ -10,7 +10,7 @@
         "lint:fix": "eslint . --fix",
         "format": "prettier --write .",
         "preview": "vite preview",
-        "server": "json-server --watch src/mock/db.json --port 5006",
+        "server": "json-server --watch src/mock/db.json --port 7777",
         "start": "vite preview",
         "prepare": "husky install"
     },

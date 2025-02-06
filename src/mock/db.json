@@ -5,84 +5,349 @@
             "name": "T-shirt with Tape Details",
             "price": 120,
             "rating": 4.5,
-            "image": "/src/mock/images/img.png"
+            "image": "/src/mock/images/img.png",
+            "description": "Hello hello hello hi hi hi hi hello hello 1 2 3 4 5",
+            "variants": [
+                {
+                    "attribute": "Red",
+                    "hex": "#FF0000",
+                    "stock": [
+                        { "attribute": "Small", "quantity": 0 },
+                        { "attribute": "Medium", "quantity": 5 },
+                        { "attribute": "Large", "quantity": 10 },
+                        { "attribute": "X-Large", "quantity": 10 }
+                    ]
+                },
+                {
+                    "attribute": "Blue",
+                    "hex": "#0000FF",
+                    "stock": [
+                        { "attribute": "Small", "quantity": 0 },
+                        { "attribute": "Medium", "quantity": 5 },
+                        { "attribute": "Large", "quantity": 10 },
+                        { "attribute": "X-Large", "quantity": 10 }
+                    ]
+                },
+                {
+                    "attribute": "Black",
+                    "hex": "#000000",
+                    "stock": [
+                        { "attribute": "Small", "quantity": 0 },
+                        { "attribute": "Medium", "quantity": 5 },
+                        { "attribute": "Large", "quantity": 10 },
+                        { "attribute": "X-Large", "quantity": 10 }
+                    ]
+                }
+            ]
         },
         {
             "id": 2,
             "name": "Skinny Fit Jeans",
             "price": 240,
             "rating": 3.5,
-            "image": "/src/mock/images/img_1.png"
+            "image": "/src/mock/images/img_1.png",
+            "description": "Hello hello hello hi hi hi hi hello hello 1 2 3 4 5",
+            "variants": [
+                {
+                    "attribute": "Light Blue",
+                    "hex": "#ADD8E6",
+                    "stock": [
+                        { "attribute": "Small", "quantity": 0 },
+                        { "attribute": "Medium", "quantity": 5 },
+                        { "attribute": "Large", "quantity": 10 },
+                        { "attribute": "X-Large", "quantity": 10 }
+                    ]
+                },
+                {
+                    "attribute": "Dark Blue",
+                    "hex": "#00008B",
+                    "stock": [
+                        { "attribute": "Small", "quantity": 0 },
+                        { "attribute": "Medium", "quantity": 5 },
+                        { "attribute": "Large", "quantity": 10 },
+                        { "attribute": "X-Large", "quantity": 10 }
+                    ]
+                }
+            ]
         },
         {
             "id": 3,
             "name": "Checkered Shirt",
             "price": 180,
             "rating": 4.5,
-            "image": "/src/mock/images/img_2.png"
+            "image": "/src/mock/images/img_2.png",
+            "description": "Hello hello hello hi hi hi hi hello hello 1 2 3 4 5",
+            "variants": [
+                {
+                    "attribute": "Dark blue",
+                    "hex": "#8B0000",
+                    "stock": [
+                        { "attribute": "Small", "quantity": 0 },
+                        { "attribute": "Medium", "quantity": 5 },
+                        { "attribute": "Large", "quantity": 10 },
+                        { "attribute": "X-Large", "quantity": 10 }
+                    ]
+                },
+                {
+                    "attribute": "Black",
+                    "hex": "#4682B4",
+                    "stock": [
+                        { "attribute": "Small", "quantity": 0 },
+                        { "attribute": "Medium", "quantity": 5 },
+                        { "attribute": "Large", "quantity": 10 },
+                        { "attribute": "X-Large", "quantity": 10 }
+                    ]
+                }
+            ]
         },
         {
             "id": 4,
             "name": "Sleeve Striped T-shirt",
             "price": 130,
             "rating": 4.5,
-            "image": "/src/mock/images/img_3.png"
+            "image": "/src/mock/images/img_3.png",
+            "description": "Hello hello hello hi hi hi hi hello hello 1 2 3 4 5",
+            "variants": [
+                {
+                    "attribute": "orange",
+                    "hex": "#000000",
+                    "stock": [
+                        { "attribute": "Small", "quantity": 0 },
+                        { "attribute": "Medium", "quantity": 5 },
+                        { "attribute": "Large", "quantity": 10 },
+                        { "attribute": "X-Large", "quantity": 10 }
+                    ]
+                }
+            ]
         },
         {
             "id": 5,
             "name": "Vertical Striped Shirt",
             "price": 212,
             "rating": 5.0,
-            "image": "/src/mock/images/img_4.png"
+            "image": "/src/mock/images/img_4.png",
+            "description": "Hello hello hello hi hi hi hi hello hello 1 2 3 4 5",
+            "variants": [
+                {
+                    "attribute": "Green",
+                    "hex": "#0000FF",
+                    "stock": [
+                        { "attribute": "Small", "quantity": 0 },
+                        { "attribute": "Medium", "quantity": 5 },
+                        { "attribute": "Large", "quantity": 10 },
+                        { "attribute": "X-Large", "quantity": 10 }
+                    ]
+                }
+            ]
         },
         {
             "id": 6,
             "name": "Courage Graphic T-shirt",
             "price": 145,
             "rating": 4.0,
-            "image": "/src/mock/images/img_5.png"
+            "image": "/src/mock/images/img_5.png",
+            "description": "Hello hello hello hi hi hi hi hello hello 1 2 3 4 5",
+            "variants": [
+                {
+                    "attribute": "Orange",
+                    "hex": "#808080",
+                    "stock": [
+                        { "attribute": "Small", "quantity": 0 },
+                        { "attribute": "Medium", "quantity": 5 },
+                        { "attribute": "Large", "quantity": 10 },
+                        { "attribute": "X-Large", "quantity": 10 }
+                    ]
+                },
+                {
+                    "attribute": "Blue",
+                    "hex": "#000000",
+                    "stock": [
+                        { "attribute": "Small", "quantity": 0 },
+                        { "attribute": "Medium", "quantity": 5 },
+                        { "attribute": "Large", "quantity": 10 },
+                        { "attribute": "X-Large", "quantity": 10 }
+                    ]
+                }
+            ]
         },
         {
             "id": 7,
             "name": "Loose Fit Bermuda Shorts",
             "price": 80,
             "rating": 3.0,
-            "image": "/src/mock/images/img_6.png"
+            "image": "/src/mock/images/img_6.png",
+            "description": "Hello hello hello hi hi hi hi hello hello 1 2 3 4 5",
+            "variants": [
+                {
+                    "attribute": "Light blue",
+                    "hex": "#F0E68C",
+                    "stock": [
+                        { "attribute": "Small", "quantity": 0 },
+                        { "attribute": "Medium", "quantity": 5 },
+                        { "attribute": "Large", "quantity": 10 },
+                        { "attribute": "X-Large", "quantity": 10 }
+                    ]
+                },
+                {
+                    "attribute": "Navy Blue",
+                    "hex": "#000080",
+                    "stock": [
+                        { "attribute": "Small", "quantity": 0 },
+                        { "attribute": "Medium", "quantity": 5 },
+                        { "attribute": "Large", "quantity": 10 },
+                        { "attribute": "X-Large", "quantity": 10 }
+                    ]
+                }
+            ]
         },
         {
             "id": 8,
             "name": "Faded Skinny Jeans",
             "price": 210,
             "rating": 4.5,
-            "image": "/src/mock/images/img_7.png"
+            "image": "/src/mock/images/img_7.png",
+            "description": "Hello hello hello hi hi hi hi hello hello 1 2 3 4 5",
+            "variants": [
+                {
+                    "attribute": "Black",
+                    "hex": "#B0C4DE",
+                    "stock": [
+                        { "attribute": "Small", "quantity": 0 },
+                        { "attribute": "Medium", "quantity": 5 },
+                        { "attribute": "Large", "quantity": 10 },
+                        { "attribute": "X-Large", "quantity": 10 }
+                    ]
+                },
+                {
+                    "attribute": "Dark Gray",
+                    "hex": "#A9A9A9",
+                    "stock": [
+                        { "attribute": "Small", "quantity": 0 },
+                        { "attribute": "Medium", "quantity": 5 },
+                        { "attribute": "Large", "quantity": 10 },
+                        { "attribute": "X-Large", "quantity": 10 }
+                    ]
+                }
+            ]
         },
         {
             "id": 9,
             "name": "Polo with Contrast Trims",
             "price": 212,
             "rating": 4.0,
-            "image": "/src/mock/images/img_8.png"
+            "image": "/src/mock/images/img_8.png",
+            "variants": [
+                {
+                    "attribute": "Blue",
+                    "hex": "#FFFFFF",
+                    "stock": [
+                        { "attribute": "Small", "quantity": 0 },
+                        { "attribute": "Medium", "quantity": 5 },
+                        { "attribute": "Large", "quantity": 10 },
+                        { "attribute": "X-Large", "quantity": 10 }
+                    ]
+                },
+                {
+                    "attribute": "Dark blue",
+                    "hex": "#000000",
+                    "stock": [
+                        { "attribute": "Small", "quantity": 0 },
+                        { "attribute": "Medium", "quantity": 5 },
+                        { "attribute": "Large", "quantity": 10 },
+                        { "attribute": "X-Large", "quantity": 10 }
+                    ]
+                }
+            ]
         },
         {
             "id": 10,
             "name": "Gradient Graphic T-shirt",
             "price": 145,
             "rating": 3.6,
-            "image": "/src/mock/images/img_9.png"
+            "image": "/src/mock/images/img_9.png",
+            "description": "Hello hello hello hi hi hi hi hello hello 1 2 3 4 5",
+            "variants": [
+                {
+                    "attribute": "White",
+                    "hex": "#1E90FF",
+                    "stock": [
+                        { "attribute": "Small", "quantity": 0 },
+                        { "attribute": "Medium", "quantity": 5 },
+                        { "attribute": "Large", "quantity": 10 },
+                        { "attribute": "X-Large", "quantity": 10 }
+                    ]
+                },
+                {
+                    "attribute": "Black",
+                    "hex": "#696969",
+                    "stock": [
+                        { "attribute": "Small", "quantity": 0 },
+                        { "attribute": "Medium", "quantity": 5 },
+                        { "attribute": "Large", "quantity": 10 },
+                        { "attribute": "X-Large", "quantity": 10 }
+                    ]
+                }
+            ]
         },
         {
             "id": 11,
             "name": "Polo with Tipping Details",
             "price": 180,
             "rating": 4.5,
-            "image": "/src/mock/images/img_10.png"
+            "image": "/src/mock/images/img_10.png",
+            "description": "Hello hello hello hi hi hi hi hello hello 1 2 3 4 5",
+            "variants": [
+                {
+                    "attribute": "Navy red",
+                    "hex": "#000080",
+                    "stock": [
+                        { "attribute": "Small", "quantity": 0 },
+                        { "attribute": "Medium", "quantity": 5 },
+                        { "attribute": "Large", "quantity": 10 },
+                        { "attribute": "X-Large", "quantity": 10 }
+                    ]
+                },
+                {
+                    "attribute": "White",
+                    "hex": "#FFFFFF",
+                    "stock": [
+                        { "attribute": "Small", "quantity": 0 },
+                        { "attribute": "Medium", "quantity": 5 },
+                        { "attribute": "Large", "quantity": 10 },
+                        { "attribute": "X-Large", "quantity": 10 }
+                    ]
+                }
+            ]
         },
         {
             "id": 12,
             "name": "Black Striped T-shirt",
             "price": 120,
             "rating": 5.0,
-            "image": "/src/mock/images/img_11.png"
+            "image": "/src/mock/images/img_11.png",
+            "description": "Hello hello hello hi hi hi hi hello hello 1 2 3 4 5",
+            "variants": [
+                {
+                    "attribute": "Black",
+                    "hex": "#000000",
+                    "stock": [
+                        { "attribute": "Small", "quantity": 0 },
+                        { "attribute": "Medium", "quantity": 5 },
+                        { "attribute": "Large", "quantity": 10 },
+                        { "attribute": "X-Large", "quantity": 10 }
+                    ]
+                },
+                {
+                    "attribute": "Red",
+                    "hex": "#808080",
+                    "stock": [
+                        { "attribute": "Small", "quantity": 0 },
+                        { "attribute": "Medium", "quantity": 5 },
+                        { "attribute": "Large", "quantity": 10 },
+                        { "attribute": "X-Large", "quantity": 10 }
+                    ]
+                }
+            ]
         }
     ]
 }
