@@ -63,7 +63,7 @@ export const ProductList: React.FC = () => {
 
     useEffect(() => {
         loadProducts();
-    }, []);
+    });
 
     return (
         <section className={styles.container}>
