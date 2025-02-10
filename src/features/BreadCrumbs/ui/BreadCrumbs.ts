@@ -1,6 +1,6 @@
 import { useLocation } from "react-router-dom";
 
-export const useBreadCrumbs = productNameForUrl => {
+export const useBreadCrumbs = () => {
     const location = useLocation();
     const pathParts = location.pathname.split("/").filter(Boolean);
     let accumulatedPath = "";

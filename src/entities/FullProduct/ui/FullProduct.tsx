@@ -16,7 +16,6 @@ interface FullProductProps {
 }
 
 export const FullProduct: React.FC<FullProductProps> = ({
-    id,
     name,
     description,
     rating,

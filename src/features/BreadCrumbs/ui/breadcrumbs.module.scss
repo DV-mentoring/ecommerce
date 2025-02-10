@@ -1,29 +1,25 @@
-.bread{
-  display: flex;
-  padding-top: 2rem;
-
-  .span{
+.bread {
     display: flex;
-    justify-content: center;
-    .crumb{
-      align-items: center;
-      text-decoration: none;
-      color: $color-text-secondary  ;
-    }
-    .crumb:hover{
-      text-decoration-line: underline;
-    }
-    .img{
-      display: inline-block;
-      vertical-align: middle;
-    }
-  }
+    padding-top: 2rem;
 
-  .span:last-child .crumb{
-    color: $color-text-primary
-  }
+    .span {
+        display: flex;
+        justify-content: center;
+        .crumb {
+            align-items: center;
+            text-decoration: none;
+            color: $color-text-secondary;
+        }
+        .crumb:hover {
+            text-decoration-line: underline;
+        }
+        .img {
+            display: inline-block;
+            vertical-align: middle;
+        }
+    }
+
+    .span:last-child .crumb {
+        color: $color-text-primary;
+    }
 }
-
-
-
-

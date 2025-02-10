@@ -1,9 +1,33 @@
 {
     "categories": [
-        { "id": 1, "name": "Discounts", "slug": "discounts", "parentId": null, "filter": "discount" },
-        { "id": 2, "name": "New Arrival", "slug": "new", "parentId": null, "filter": "new" },
-        { "id": 3, "name": "Best Sales", "slug": "best", "parentId": null, "filter": "best" },
-        { "id": 4, "name": "Brands", "slug": "brands", "parentId": null, "filter": "brand" },
+        {
+            "id": 1,
+            "name": "Discounts",
+            "slug": "discounts",
+            "parentId": null,
+            "filter": "discount"
+        },
+        {
+            "id": 2,
+            "name": "New Arrival",
+            "slug": "new",
+            "parentId": null,
+            "filter": "new"
+        },
+        {
+            "id": 3,
+            "name": "Best Sales",
+            "slug": "best",
+            "parentId": null,
+            "filter": "best"
+        },
+        {
+            "id": 4,
+            "name": "Brands",
+            "slug": "brands",
+            "parentId": null,
+            "filter": "brand"
+        },
 
         { "id": 5, "name": "Top", "slug": "top", "parentId": null },
         { "id": 6, "name": "Bottom", "slug": "bottom", "parentId": null },
