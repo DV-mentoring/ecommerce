@@ -1,8 +1,27 @@
 {
+    "categories": [
+        { "id": 1, "name": "Discounts", "slug": "discounts", "parentId": null, "filter": "discount" },
+        { "id": 2, "name": "New Arrival", "slug": "new", "parentId": null, "filter": "new" },
+        { "id": 3, "name": "Best Sales", "slug": "best", "parentId": null, "filter": "best" },
+        { "id": 4, "name": "Brands", "slug": "brands", "parentId": null, "filter": "brand" },
+
+        { "id": 5, "name": "Top", "slug": "top", "parentId": null },
+        { "id": 6, "name": "Bottom", "slug": "bottom", "parentId": null },
+        { "id": 7, "name": "Sneakers", "slug": "sneakers", "parentId": null },
+
+        { "id": 8, "name": "Hoodies", "slug": "hoodies", "parentId": 5 },
+        { "id": 9, "name": "Sweaters", "slug": "sweaters", "parentId": 5 },
+        { "id": 10, "name": "T-Shirts", "slug": "t-shirts", "parentId": 5 },
+
+        { "id": 11, "name": "Jeans", "slug": "jeans", "parentId": 6 },
+        { "id": 12, "name": "Pants", "slug": "pants", "parentId": 6 },
+        { "id": 13, "name": "Shorts", "slug": "shorts", "parentId": 6 }
+    ],
     "products": [
         {
             "id": 1,
             "name": "T-shirt with Tape Details",
+            "categoryId": 10,
             "price": 120,
             "rating": 4.5,
             "image": "/src/mock/images/img.png",
@@ -43,6 +62,7 @@
         {
             "id": 2,
             "name": "Skinny Fit Jeans",
+            "categoryId": 11,
             "price": 240,
             "rating": 3.5,
             "image": "/src/mock/images/img_1.png",
@@ -73,6 +93,7 @@
         {
             "id": 3,
             "name": "Checkered Shirt",
+            "categoryId": 10,
             "price": 180,
             "rating": 4.5,
             "image": "/src/mock/images/img_2.png",
@@ -103,6 +124,7 @@
         {
             "id": 4,
             "name": "Sleeve Striped T-shirt",
+            "categoryId": 10,
             "price": 130,
             "rating": 4.5,
             "image": "/src/mock/images/img_3.png",
@@ -123,6 +145,7 @@
         {
             "id": 5,
             "name": "Vertical Striped Shirt",
+            "categoryId": 10,
             "price": 212,
             "rating": 5.0,
             "image": "/src/mock/images/img_4.png",
@@ -143,6 +166,7 @@
         {
             "id": 6,
             "name": "Courage Graphic T-shirt",
+            "categoryId": 10,
             "price": 145,
             "rating": 4.0,
             "image": "/src/mock/images/img_5.png",
@@ -173,6 +197,7 @@
         {
             "id": 7,
             "name": "Loose Fit Bermuda Shorts",
+            "categoryId": 13,
             "price": 80,
             "rating": 3.0,
             "image": "/src/mock/images/img_6.png",
@@ -203,6 +228,7 @@
         {
             "id": 8,
             "name": "Faded Skinny Jeans",
+            "categoryId": 11,
             "price": 210,
             "rating": 4.5,
             "image": "/src/mock/images/img_7.png",
@@ -233,6 +259,7 @@
         {
             "id": 9,
             "name": "Polo with Contrast Trims",
+            "categoryId": 10,
             "price": 212,
             "rating": 4.0,
             "image": "/src/mock/images/img_8.png",
@@ -262,6 +289,7 @@
         {
             "id": 10,
             "name": "Gradient Graphic T-shirt",
+            "categoryId": 10,
             "price": 145,
             "rating": 3.6,
             "image": "/src/mock/images/img_9.png",
@@ -292,6 +320,7 @@
         {
             "id": 11,
             "name": "Polo with Tipping Details",
+            "categoryId": 10,
             "price": 180,
             "rating": 4.5,
             "image": "/src/mock/images/img_10.png",
@@ -322,6 +351,7 @@
         {
             "id": 12,
             "name": "Black Striped T-shirt",
+            "categoryId": 10,
             "price": 120,
             "rating": 5.0,
             "image": "/src/mock/images/img_11.png",

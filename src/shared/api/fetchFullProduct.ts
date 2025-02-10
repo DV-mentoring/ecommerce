@@ -1,6 +1,6 @@
 import axios from "axios";
 
-export const fetchFullProduct = async id => {
+export const fetchFullProduct = async (id: number) => {
     try {
         const response = await axios.get(
             `http://localhost:7777/products/${id}`,

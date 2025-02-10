@@ -1,8 +1,10 @@
 import { FullProduct } from "../../../entities/FullProduct/ui/FullProduct.tsx";
-import { fetchFullProduct } from "../../../entities/FullProduct/model/api.ts";
+import { fetchFullProduct } from "../../../shared/api/fetchFullProduct.ts";
 import { useParams } from "react-router-dom";
 import { useEffect } from "react";
 import { useState } from "react";
+import { BreadCrumbs } from "../../../features/BreadCrumbs/ui/BreadCrumbs.tsx";
+import Header from "../../../widgets/Header/ui/Header.tsx";
 
 interface FullProduct {
     id: number;
@@ -16,18 +18,16 @@ interface FullProduct {
 }
 
 export function ProductPage() {
-    const productId = useParams();
+    const { productId } = useParams();
     const [product, setProduct] = useState<FullProduct>([]);
 
     useEffect(() => {
         const loadProduct = async () => {
             try {
-                const response = await fetchFullProduct(Number(productId.id));
+                const response = await fetchFullProduct(Number(productId));
                 setProduct(response.data);
             } catch (error) {
                 console.log(error);
-            } finally {
-                console.log("end of the loading");
             }
         };
         if (productId) {
@@ -47,7 +47,9 @@ export function ProductPage() {
     } = product;
 
     return (
-        <div>
+        <main>
+            <Header />
+            <BreadCrumbs />
             <FullProduct
                 id={id}
                 name={name}
@@ -58,6 +60,6 @@ export function ProductPage() {
                 price={price}
                 imageSrc={imageSrc}
             />
-        </div>
+        </main>
     );
 }

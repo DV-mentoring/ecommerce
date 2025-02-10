@@ -4,6 +4,7 @@ import { fetchProducts } from "../model/api.ts";
 import styles from "./productList.module.scss";
 import { Button } from "../../../shared/ui/Button/Button.tsx";
 import { useNavigate } from "react-router-dom";
+import { generateUri } from "../../../shared/api/generateUri.ts";
 
 interface Product {
     id: number;
@@ -25,9 +26,9 @@ export const ProductList: React.FC = () => {
     const PRODUCTS_SET = 8;
     const navigate = useNavigate();
 
-    const handleProductClick = (productId: number) => {
-        navigate(`/product/${encodeURIComponent(productId)}`);
-        console.log(encodeURIComponent(productId));
+    const handleProductClick = async (productId: number) => {
+        const uri = await generateUri(productId);
+        navigate(`/category${uri}/product/${productId}`);
     };
 
     const loadProducts = async () => {
@@ -63,7 +64,7 @@ export const ProductList: React.FC = () => {
 
     useEffect(() => {
         loadProducts();
-    });
+    }, []);
 
     return (
         <section className={styles.container}>

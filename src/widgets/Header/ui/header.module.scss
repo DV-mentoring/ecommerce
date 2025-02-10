@@ -1,8 +1,9 @@
 header {
     max-width: 1280px;
-    height: 3rem;
-    padding-top: 1rem;
+    height: auto;
+    padding: 1rem 0;
     margin: 0 auto;
+    border-bottom: 2px solid  $color-bg-secondary;
 
     nav {
         max-width: 1280px;

@@ -1,7 +1,6 @@
 import { StarsRender } from "../../../shared/ui/Rating/StarsRender.tsx";
 import styles from "./FullProduct.module.scss";
 import { useState } from "react";
-import Header from "../../../widgets/Header/ui/Header.tsx";
 
 interface FullProductProps {
     id: number;
@@ -17,6 +16,7 @@ interface FullProductProps {
 }
 
 export const FullProduct: React.FC<FullProductProps> = ({
+    id,
     name,
     description,
     rating,
@@ -45,7 +45,6 @@ export const FullProduct: React.FC<FullProductProps> = ({
     }
     return (
         <>
-            <Header />
             <main className={styles.section}>
                 <div className={styles.image_container}>
                     <div className={styles.images}>{images}</div>
