@@ -2,7 +2,7 @@ import axios from "axios";
 
 export const fetchProducts = async (page = 1, per_page = 8) => {
     try {
-        const response = await axios.get("http://localhost:7777/products", {
+        const response = await axios.get("http://localhost:5555/products", {
             params: { _page: page, _per_page: per_page },
         });
         return {

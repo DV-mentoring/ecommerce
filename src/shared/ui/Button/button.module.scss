@@ -1,3 +1,14 @@
 .btn {
-    padding: 1rem;
+    padding: 1rem 2rem;
+    justify-self: center;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2rem;
+    outline: 1px solid $color-bg-secondary;
+    border: none;
+    background: $color-bg-primary;
+    transition: 0.2s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+    cursor: pointer;
+    position: relative;
 }
+

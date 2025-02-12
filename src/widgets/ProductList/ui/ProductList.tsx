@@ -85,12 +85,7 @@ export const ProductList: React.FC = () => {
             )}
             {error && <p>{error}</p>}
             {hasMore && (
-                <Button
-                    onClick={loadProducts}
-                    disabled={loading}
-                    label="Load more"
-                    className={styles.load}
-                >
+                <Button onClick={loadProducts} disabled={loading}>
                     {loading ? "Loading..." : "Load More"}
                 </Button>
             )}

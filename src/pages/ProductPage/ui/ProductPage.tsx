@@ -6,20 +6,28 @@ import { useState } from "react";
 import { BreadCrumbs } from "../../../features/BreadCrumbs/ui/BreadCrumbs.tsx";
 import Header from "../../../widgets/Header/ui/Header.tsx";
 
+interface Variant {
+    attribute: string;
+    hex: string;
+    stock: {
+        attribute: string;
+        quantity: number;
+    }[];
+}
+
 interface FullProduct {
     id: number;
     name: string;
     description: string;
-    color: string;
-    size: number;
-    imageSrc: string;
+    image: string;
     price: number;
     rating: number;
+    variants: Variant[];
 }
 
 export function ProductPage() {
     const { productId } = useParams();
-    const [product, setProduct] = useState<FullProduct>([]);
+    const [product, setProduct] = useState<FullProduct | undefined>(undefined);
 
     useEffect(() => {
         const loadProduct = async () => {
@@ -35,31 +43,35 @@ export function ProductPage() {
         }
     }, [productId]);
 
-    const {
-        id,
-        name,
-        description,
-        color,
-        size,
-        rating,
-        price,
-        image: imageSrc,
-    } = product;
-
+    if (product) {
+        const {
+            id,
+            name,
+            description,
+            variants,
+            rating,
+            price,
+            image: imageSrc,
+        } = product;
+        return (
+            <main>
+                <Header />
+                <BreadCrumbs />
+                <FullProduct
+                    id={id}
+                    name={name}
+                    description={description}
+                    rating={rating}
+                    price={price}
+                    imageSrc={imageSrc}
+                    variants={variants}
+                />
+            </main>
+        );
+    } else;
     return (
         <main>
-            <Header />
-            <BreadCrumbs />
-            <FullProduct
-                id={id}
-                name={name}
-                description={description}
-                color={color}
-                size={size}
-                rating={rating}
-                price={price}
-                imageSrc={imageSrc}
-            />
+            <div>loading...</div>
         </main>
     );
 }
